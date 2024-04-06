@@ -1,0 +1,179 @@
+#anim{
+    background-image: url(/img/fondoOsos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1300px;
+    height: 780px;
+}
+.countdown{
+    opacity: 0;
+    background: transparent;
+    background-repeat: no-repeat;
+    width: 550px;
+    height: 250px;
+    position: relative;
+    top: 35%;
+    left: 35%;
+
+    animation-name: countdown;
+    animation-duration: 5s;
+}
+#nube {
+    opacity: 0;
+    background-image: url(/img/nube.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 280px;
+    height: 250px;
+    transform: translate(-60%, -40%);
+
+    animation: nube 6s ease-in-out forwards; 
+    animation-duration: 7s ;
+    animation-delay: 5s;
+}
+#lluvia{
+    opacity: 1;
+    background-image: url(/img/lluvia.png) ;
+    z-index: 4;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 0px;
+    position: relative;
+    top: 280px;
+
+    animation-name:lluvia;
+    animation-duration: 4s;
+    animation-delay: 5s; 
+    transition: height 3s ease-in-out;
+}
+#flor{
+    opacity: 0;
+    background: url(/img/flor.png) no-repeat ;
+    width:200px ;
+    height: 200px;
+    position: relative;
+    bottom: -100px;
+    left: 40%;
+    
+    animation-name: flor;
+    animation-duration: 2s;
+    animation-delay: 9.5s;
+    animation-fill-mode: forwards; 
+}
+#sol{
+    opacity: 0;
+    background: url(/img/sol.png) no-repeat bottom;
+    background-size: 200px 200px;
+    width: 200px;
+    height: 170px;
+    position: relative;
+    right:-75%;
+    top:-30%;
+
+    animation-name: sol;
+    animation-duration: 2s;
+    animation-delay: 9.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#mensaje{
+    opacity: 0;
+    background: url(/img/texto.png) no-repeat ;
+    background-size: 950px 200px;
+    width:900px ;
+    height: 200px;
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    
+    animation-name: mensaje;
+    animation-duration: 2s;
+    animation-delay: 11.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes nube {
+    0% {
+        opacity: 0;
+        left: 100%;
+    }
+    20%, 80% {
+        opacity: 1;
+        left: 40%;
+    }
+    45%, 65% {
+        opacity: 1;
+        background-image: url(/img/nojado.png);
+    }
+    100% {
+        opacity: 1;
+        left: -100%;
+    }
+}
+@keyframes lluvia {
+    50%  {
+        height: 100px;
+    }
+    100% {
+        height: 400px;
+    }
+
+}
+
+
+@keyframes flor {
+    from {
+        opacity: 0;
+        height: 200px;
+    }
+    to {
+        opacity: 1;
+    }
+
+} 
+
+
+@keyframes sol {
+    0%{
+        opacity: 1;
+        height: 179px;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(1turn);
+    }
+    
+}
+@keyframes mensaje {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+} 
+@keyframes countdown {
+    20%{
+        background: url(/img/tres.png) no-repeat top;
+    }
+    40%{
+        background: url(/img/dos.png) no-repeat top;
+    }
+    60%{
+        background: url(/img/uno.png) no-repeat top;
+    }
+    80%{
+        background: url(/img/accion.png) no-repeat top;
+    }
+    90%{
+        opacity: 1;
+        height: 500px;
+    }
+    to {
+        opacity: 0;
+    }
+}  
+
